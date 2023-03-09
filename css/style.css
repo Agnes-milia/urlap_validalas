@@ -73,6 +73,10 @@ input[type=submit]{
     width: auto;
 }
 
+.success-message {
+			display: none;
+}
+
 @media all and (max-width: 1000px){
 	main{
 		width: 90%;
