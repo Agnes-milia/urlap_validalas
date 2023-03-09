@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="hu">
+    <head>
+        <title>Űrlap reguláris kifejezéssel</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <main>
+            <form action="action.php" method="post">
+            <fieldset class="kotelezo_mezo">
+                <legend>regisztráció</legend>
+                <label for="nev">felhasználónév</label>
+                <input type="text" id="nev" name="nev" placeholder="csak ékezetmentes betűk" pattern="[a-zA-Z]+" required size="25"><br>
+                <label for="jelszo">jelszó</label>
+                <input type="password" id="jelszo" name="jelszo" placeholder="min. 3 karakter" pattern="^.{3,}$" required size="25"><br>
+                <label for="email">e-mail cím</label>
+                <input type="email" id="email" name="email" placeholder="vmi@vmi.hu" required pattern="^\D+\w+@\w+\.hu$" size="25"><br>
+            </fieldset>
+            <fieldset>
+                <legend>születés</legend>
+                <label for="szuletes">születési dátum</label>
+                <input type="date" id="szuletes" name="date"><br>
+                <fieldset id="szemelyes">
+                    <legend>személyes</legend>
+                    <div id="oszlopos">
+                        <div id="egy">
+							<input type="checkbox" id="angol" name="angol" value="angol">
+							<label for="angol">angol</label><br>
+							<input type="checkbox" id="nemet" name="nemet" value="nemet">
+							<label for="nemet">német</label><br>
+                        </div>
+                        <div id="ketto">
+							<input type="radio" id="szf" name="szak" value="szf">
+							<label for="szf">szoftverfejlesztő</label><br>
+							<input type="radio" id="rgazda" name="szak" value="rgazda">
+							<label for="rgazda">rendszergazda</label><br>
+							<input type="radio" id="egyeb" name="szak" value="egyeb">
+							<label for="egyeb">egyéb</label>
+                        </div>
+
+                        <div id="harom">
+							<input type="radio" id="ffi" name="nem" value="ffi">
+							<label for="ffi">férfi</label><br>
+							<input type="radio" id="no" name="nem" value="no">
+							<label for="no">nő</label><br>
+                        </div>
+                    </div>
+                </fieldset>
+            </fieldset>
+            <input type="submit" value="regisztráció">
+            </form>
+        </main>
+    </body>
+</html>

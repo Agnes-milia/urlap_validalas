@@ -1,0 +1,96 @@
+@charset "UTF-8";
+*{
+	box-sizing: border-box;
+}
+:root{
+	--hatter: #F4F4F4;
+}
+
+main{
+    background-color: var(--hatter);
+    width: 60%;
+    margin: 10px auto;
+    font-size: 16px;
+    padding: 0.6em;
+    font-family: Arial;
+}
+fieldset{
+    border: 3px solid #ACD2DF;
+    background-color: #E8F2F6;
+    padding: 1em;
+    margin: 1.3em;
+}
+legend, input[type=submit]{
+    border: 1px solid #75A420;
+    background-color: #90C72E;
+    color: white;
+    padding: 0.4em;
+}
+legend{
+    width: 6em;
+    margin-left: 2em;
+}
+#szemelyes{
+    background-color: white;
+    
+}
+#szemelyes legend{
+    border-color: #AFD3E0;
+    background-color: #ACD2DF;
+    color: #51717E;
+}
+label{
+    color: #3E6170;
+    float: left;
+    width: 40%;
+}
+br{
+    clear: left;
+}
+input{
+    border-color: #ACD2DF;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    font-family: 'Courier New', monospace;
+}
+.kotelezo_mezo label::after { 
+    content: "*";
+    color: red;
+}
+input[type=text]{
+    float: left;
+}
+input[type=submit]{
+    font-size: 1.2em;
+    font-family: Arial;
+}
+#oszlopos{
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+}
+#oszlopos label{
+    float: none;
+    width: auto;
+}
+
+@media all and (max-width: 1000px){
+	main{
+		width: 90%;
+	}
+}
+
+@media all and (max-width: 800px){
+	main{
+		width: 100%;
+	}
+}
+
+@media all and (max-width: 600px){
+	main{
+		width: 100%;
+	}
+	#oszlopos{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+}
