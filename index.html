@@ -17,7 +17,7 @@ and open the template in the editor.
             <fieldset class="kotelezo_mezo">
                 <legend>regisztráció</legend>
                 <label for="nev">felhasználónév</label>
-                <input type="text" id="nev" name="nev" placeholder="csak ékezetmentes betűk" pattern="[a-zA-Z]+" required size="25"><br>
+                <input type="text" id="nev" name="nev" placeholder="csak ékezetmentes betűk" pattern="[a-zA-Z\s]+" required size="25"><br>
                 <label for="jelszo">jelszó</label>
                 <input type="password" id="jelszo" name="jelszo" placeholder="min. 3 karakter" pattern="^.{3,}$" required size="25"><br>
                 <label for="email">e-mail cím</label>
